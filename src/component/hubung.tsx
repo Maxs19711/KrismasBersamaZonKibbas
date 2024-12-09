@@ -4,11 +4,25 @@ import React from "react";
 const Hubung = () => {
   // Sample data (can be passed as props or fetched dynamically)
   const items = [
-    { id: 1, nama: "-", noHp: "-", kgChpl: "-" },
-    { id: 2, nama: "-", noHp: "-", kgChpl: "-" },
-    { id: 2, nama: "-", noHp: "-", kgChpl: "-" },
-    { id: 2, nama: "-", noHp: "-", kgChpl: "-" },
-    { id: 2, nama: "-", noHp: "-", kgChpl: "-" },
+    {
+      id: 1,
+      nama: "Elizabeth Thomas",
+      noHp: "0128157285",
+      kgChpl: "St John of The Cross",
+    },
+    {
+      id: 2,
+      nama: "Paul Gambisir",
+      noHp: "0195326185",
+      kgChpl: "St John of The Cross",
+    },
+    { id: 2, nama: "Walter Sunggin", noHp: "0148597878", kgChpl: "-" },
+    {
+      id: 2,
+      nama: "Lydia Bidi",
+      noHp: "0178156660",
+      kgChpl: "St John of The Cross",
+    },
   ];
 
   return (
