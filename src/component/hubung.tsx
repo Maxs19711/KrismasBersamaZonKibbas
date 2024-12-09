@@ -63,11 +63,13 @@ const Hubung = () => {
         <Thead>
           <Tr>
             <Th color="black">Nama</Th>
-            <Th color="black">No. HP</Th>
-
-            <Th color="black" textAlign="end">
-              Kampung / Chapel
+            <Th color="black" textAlign="center">
+              No. HP
             </Th>
+
+            {/* <Th color="black" textAlign="end">
+              Kampung / Chapel
+            </Th> */}
           </Tr>
         </Thead>
 
@@ -76,7 +78,7 @@ const Hubung = () => {
           {items.map((item) => (
             <Tr key={item.id}>
               <Td>{item.nama}</Td>
-              <Td>
+              <Td textAlign="center">
                 {item.noHp}{" "}
                 <Button
                   colorScheme="orange"
@@ -88,7 +90,7 @@ const Hubung = () => {
                   Copy
                 </Button>
               </Td>
-              <Td textAlign="end">{item.kgChpl}</Td>
+              {/* <Td textAlign="end">{item.kgChpl}</Td> */}
             </Tr>
           ))}
         </Tbody>
