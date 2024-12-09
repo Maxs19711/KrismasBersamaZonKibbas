@@ -10,9 +10,9 @@ import {
   Tr,
   useToast,
 } from "@chakra-ui/react";
-import React from "react";
 
 const Hubung = () => {
+  const toast = useToast();
   // Sample data (can be passed as props or fetched dynamically)
   const items = [
     {
@@ -39,7 +39,8 @@ const Hubung = () => {
   const handleCopy = (number: string) => {
     navigator.clipboard.writeText(number).then(() => {
       toast({
-        title: "Number copied to clipboard!",
+        // title: `Number ${number} copied to clipboard!`, // Dynamic number in title
+        description: `Copied: ${number}`,
         status: "success",
         duration: 2000,
         isClosable: true,
@@ -81,8 +82,6 @@ const Hubung = () => {
                   colorScheme="orange"
                   onClick={() => handleCopy(item.noHp)}
                   h={"35px"}
-                  w={"55px"}
-                  marginLeft={-9}
                   bg={"#ffc3a7"}
                   fontSize={12}
                 >
@@ -99,11 +98,3 @@ const Hubung = () => {
 };
 
 export default Hubung;
-function toast(arg0: {
-  title: string;
-  status: string;
-  duration: number;
-  isClosable: boolean;
-}) {
-  throw new Error("Function not implemented.");
-}
