@@ -12,6 +12,7 @@ const infos = () => {
     <Box
       width={{ base: "90%", sm: "90%", md: "500px", lg: "500px" }}
       marginLeft={3}
+      marginTop={31}
     >
       <Text textAlign={"left"} marginLeft={2}>
         {" "}

@@ -9,7 +9,7 @@ const photoHeader = () => {
       backgroundRepeat="no-repeat"
       backgroundPosition="center center"
       backgroundSize="cover"
-      height="100vh"
+      // height="100vh"
       margin={1}
     >
       <Image src={fImage} alt="Christmas Poster" />
