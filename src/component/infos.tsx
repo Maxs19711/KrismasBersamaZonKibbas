@@ -9,7 +9,10 @@ import React from "react";
 
 const infos = () => {
   return (
-    <Box>
+    <Box
+      width={{ base: "90%", sm: "90%", md: "500px", lg: "500px" }}
+      marginLeft={3}
+    >
       <Text textAlign={"left"} marginLeft={2}>
         {" "}
         SENARAI HADIAH:

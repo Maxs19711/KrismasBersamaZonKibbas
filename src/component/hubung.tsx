@@ -1,4 +1,15 @@
-import { Box, Center, Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  useToast,
+} from "@chakra-ui/react";
 import React from "react";
 
 const Hubung = () => {
@@ -25,6 +36,17 @@ const Hubung = () => {
     },
   ];
 
+  const handleCopy = (number: string) => {
+    navigator.clipboard.writeText(number).then(() => {
+      toast({
+        title: "Number copied to clipboard!",
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+      });
+    });
+  };
+
   return (
     <Box
       color="black"
@@ -41,6 +63,7 @@ const Hubung = () => {
           <Tr>
             <Th color="black">Nama</Th>
             <Th color="black">No. HP</Th>
+            <Th color="black"></Th>
             <Th color="black" textAlign="end">
               Kampung / Chapel
             </Th>
@@ -52,7 +75,20 @@ const Hubung = () => {
           {items.map((item) => (
             <Tr key={item.id}>
               <Td>{item.nama}</Td>
-              <Td>{item.noHp}</Td>
+              <Td>{item.noHp} </Td>
+              <Td>
+                <Button
+                  colorScheme="orange"
+                  onClick={() => handleCopy(item.noHp)}
+                  h={"35px"}
+                  w={"55px"}
+                  marginLeft={-9}
+                  bg={"#ffc3a7"}
+                  fontSize={12}
+                >
+                  Copy
+                </Button>
+              </Td>
               <Td textAlign="end">{item.kgChpl}</Td>
             </Tr>
           ))}
@@ -63,3 +99,11 @@ const Hubung = () => {
 };
 
 export default Hubung;
+function toast(arg0: {
+  title: string;
+  status: string;
+  duration: number;
+  isClosable: boolean;
+}) {
+  throw new Error("Function not implemented.");
+}
