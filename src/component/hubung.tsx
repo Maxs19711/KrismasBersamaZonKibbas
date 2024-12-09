@@ -64,7 +64,7 @@ const Hubung = () => {
           <Tr>
             <Th color="black">Nama</Th>
             <Th color="black">No. HP</Th>
-            <Th color="black"></Th>
+
             <Th color="black" textAlign="end">
               Kampung / Chapel
             </Th>
@@ -76,8 +76,8 @@ const Hubung = () => {
           {items.map((item) => (
             <Tr key={item.id}>
               <Td>{item.nama}</Td>
-              <Td>{item.noHp} </Td>
               <Td>
+                {item.noHp}{" "}
                 <Button
                   colorScheme="orange"
                   onClick={() => handleCopy(item.noHp)}
