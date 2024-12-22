@@ -53,7 +53,6 @@ const infos = () => {
       <Text textAlign={"left"}> INFO:</Text>
       <OrderedList textAlign="left" spacing={3} marginLeft={4}>
         <ListItem>Harga sekeping tiket adalah RM2.00 Sahaja</ListItem>
-        <ListItem>satu unit freezer @ Media bernilai RM700.00</ListItem>
         <ListItem>
           Tiket akan mula dijual pada 9.12.2024 melalui wakil disetiap chapel
           Zon Kibbas atau melalui wakil2 jualan yang telah dilantik oleh
