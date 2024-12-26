@@ -54,6 +54,15 @@ function App() {
 
         <Pemenang />
       </GridItem>
+      <GridItem
+        bg="white"
+        height="50px"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Box color="white"></Box>
+      </GridItem>
     </Grid>
   );
 }
